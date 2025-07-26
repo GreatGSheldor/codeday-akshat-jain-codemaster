@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <title>CodeLearner by Akshat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function toggleQR() {
+        document.getElementById("qr-img").classList.toggle("hidden");
+      }
+      function toggle(id) {
+        document.getElementById(id).classList.toggle("hidden");
+      }
+    </script>
+  </head>
+  <div class="bg-gray-800 p-4 fixed md:ml-48 w-full z-10">
+  <div class="flex justify-between items-center">
+    <div class="space-x-3 text-sm">
+      <a href="#home" class="hover:text-blue-400">Home</a>
+      <a href="#courses" class="hover:text-blue-400">Courses</a>
+      <a href="#faq" class="hover:text-blue-400">FAQ</a>
+      <a href="#signup" class="hover:text-blue-400">Sign Up</a>
+      <a href="#qr" class="hover:text-blue-400">QR</a>
+    </div>
+  </div>
+</div>
+  <body class="bg-gray-900 text-white flex">
+    <div class="hidden md:block bg-gray-800 w-48 min-h-screen p-4 fixed">
+      <h1 class="text-xl font-bold text-blue-400 mb-6">CodeLearner</h1>
+      <ul class="space-y-4">
+        <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+        <li><a href="#courses" class="hover:text-blue-400">Courses</a></li>
+        <li><a href="#faq" class="hover:text-blue-400">FAQ</a></li>
+        <li><a href="#signup" class="hover:text-blue-400">Sign Up</a></li>
+        <li><a href="#qr" class="hover:text-blue-400">QR Code</a></li>
+      </ul>
+    </div>
+
+    <div class="md:ml-52 w-full">
+      <div class="bg-gray-800 p-4 md:hidden">
+        <h1 class="text-2xl text-blue-400">CodeLearner</h1>
+        <div class="mt-2 space-x-3">
+          <a href="#home">Home</a>
+          <a href="#courses">Courses</a>
+          <a href="#faq">FAQ</a>
+          <a href="#signup">Sign Up</a>
+          <a href="#qr">QR</a>
+        </div>
+      </div>
+
+      <div id="home" class="p-6">
+        <h2 class="text-2xl font-bold">Welcome to CodeLearner</h2>
+        <p class="text-gray-300 mt-2">This website was made by Akshat using Tailwind CSS. It’s simple, clean, and made for fun.</p>
+      </div>
+
+      <div id="courses" class="p-6">
+        <h2 class="text-xl font-bold">Courses</h2>
+
+        <div class="mt-4">
+          <h3 class="cursor-pointer text-blue-400" onclick="toggle('html')">▶ HTML & CSS</h3>
+          <ul id="html" class="hidden list-disc ml-6 mt-2 text-gray-300">
+            <li>Basic Tags</li>
+            <li>Page Structure</li>
+            <li>CSS Styling</li>
+            <li>Flexbox & Grid</li>
+          </ul>
+        </div>
+
+        <div class="mt-4">
+          <h3 class="cursor-pointer text-blue-400" onclick="toggle('js')">▶ JavaScript</h3>
+          <ul id="js" class="hidden list-disc ml-6 mt-2 text-gray-300">
+            <li>Variables</li>
+            <li>DOM Manipulation</li>
+            <li>Events</li>
+            <li>Basic Conditions</li>
+          </ul>
+        </div>
+
+        <div class="mt-4">
+          <h3 class="cursor-pointer text-blue-400" onclick="toggle('py')">▶ Python</h3>
+          <ul id="py" class="hidden list-disc ml-6 mt-2 text-gray-300">
+            <li>Syntax</li>
+            <li>If/Else</li>
+            <li>Loops</li>
+            <li>Simple Projects</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="faq" class="p-6">
+        <h2 class="text-xl font-bold">FAQs</h2>
+        <details class="bg-gray-800 p-2 rounded mt-3">
+          <summary>Is this free?</summary>
+          <p class="text-gray-300">Yes, 100% free</p>
+        </details>
+        <details class="bg-gray-800 p-2 rounded mt-3">
+          <summary>Who made it?</summary>
+          <p class="text-gray-300">Akshat Jain, in 1 hour</p>
+        </details>
+        <details class="bg-gray-800 p-2 rounded mt-3">
+          <summary>How to join?</summary>
+          <p class="text-gray-300">Scroll to the QR Code</p>
+        </details>
+      </div>
+
+      <div id="signup" class="p-6">
+        <h2 class="text-xl font-bold mb-4">Sign Up</h2>
+        <form class="bg-gray-800 p-4 rounded space-y-3 max-w-md">
+          <input type="text" placeholder="Name" class="w-full p-2 rounded bg-gray-700 text-white">
+          <input type="email" placeholder="Email" class="w-full p-2 rounded bg-gray-700 text-white">
+          <input type="password" placeholder="Password" class="w-full p-2 rounded bg-gray-700 text-white">
+          <button class="bg-blue-500 px-4 py-2 w-full rounded">Create Account</button>
+        </form>
+      </div>
+
+      <div id="qr" class="p-6 text-center">
+        <h2 class="text-xl font-bold mb-4">Join via QR</h2>
+        <button onclick="toggleQR()" class="bg-blue-500 px-4 py-2 rounded">Show QR Code</button>
+        <div id="qr-img" class="hidden mt-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-S-PUQ5GEsEXsOBFWe7nyJbO6iuomt3GxlA&s" class="w-48 mx-auto rounded shadow-lg">
+        </div>
+      </div>
+
+      <div class="bg-gray-950 text-center py-4 mt-10">
+        <p class="text-sm text-gray-400">Made by Akshat Jain. Just for fun.</p>
+            
+      </div>
+    </div>
+  </body>
+</html>
